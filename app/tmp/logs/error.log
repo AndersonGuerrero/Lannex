@@ -479,3 +479,30 @@ Stack Trace:
 #1 /var/www/html/Lannex/lib/Cake/Routing/Dispatcher.php(165): Dispatcher->_invoke(Object(InicioController), Object(CakeRequest))
 #2 /var/www/html/Lannex2/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2015-05-10 10:35:51 Error: [MissingControllerException] Controller class <imgSrc=Controller could not be found.
+Exception Attributes: array (
+  'class' => '<imgSrc=Controller',
+  'plugin' => NULL,
+)
+Request URL: /Lannex/%3Cimg%20src=
+Stack Trace:
+#0 /var/www/html/Lannex/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 10:48:54 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /Lannex/favicon.png
+Stack Trace:
+#0 /var/www/html/Lannex/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2015-05-10 10:48:54 Error: [MissingControllerException] Controller class Favicon.pngController could not be found.
+Exception Attributes: array (
+  'class' => 'Favicon.pngController',
+  'plugin' => NULL,
+)
+Request URL: /Lannex/favicon.png
+Stack Trace:
+#0 /var/www/html/Lannex/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

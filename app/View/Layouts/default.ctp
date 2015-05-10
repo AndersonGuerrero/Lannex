@@ -7,6 +7,13 @@
         <!-- Set the viewport width to device width for mobile -->
         <meta name="viewport" content="width=device-width"/>
         <title><?php echo $this->fetch('title'); ?></title>
+      <?php
+echo $this->Html->meta(
+    'logo.ico',
+    '/logo.ico',
+    array('type' => 'icon')
+);
+?>
         <!-- CSS Files-->
         <?php echo $this->Html->css("style.css"); ?>
         <?php echo $this->Html->css("homepage.css"); ?>
@@ -14,7 +21,7 @@
         <?php echo $this->Html->css("responsive.css"); ?>
 
         <?php
-        echo $this->Html->meta('icon');
+        
         echo $this->fetch('meta');
         echo $this->fetch('css');
         echo $this->fetch('script');
@@ -42,8 +49,9 @@
         ================================================== -->
         <div class="row">	
             <div class="four columns">
-                <div class="logo">
-                    <a href=""><h2>LANNEX, C.A.</h2></a>
+                <div class="logo" >
+                  <?php echo $this->Html->image("logo_p.png", array("class" => "", "alt" => "info", 'width' =>'250', 'height'=> '100')) ?>
+  
                 </div>
             </div>
             <div class="right columns noleftmarg">		
