@@ -3,10 +3,11 @@
 <html class="no-js" lang="en">
     <!--<![endif]-->
     <head>
+
         <?php echo $this->Html->charset(); ?>
         <!-- Set the viewport width to device width for mobile -->
         <meta name="viewport" content="width=device-width"/>
-        <title><?php echo $this->fetch('title'); ?></title>
+        <title><?php echo $title?></title>
       <?php
 echo $this->Html->meta(
     'logo.ico',
@@ -29,6 +30,10 @@ echo $this->Html->meta(
 
     </head>
     <body>
+
+
+
+
         <!-- HIDDEN PANEL 
         ================================================== -->
         <div id="panel">
@@ -37,7 +42,7 @@ echo $this->Html->meta(
                     <?php echo $this->Html->image("info.png", array("class" => "pics", "alt" => "info")) ?>
 
                     <div class="infotext">
-                        Bienvenido a lannex esperamos que la informacion suministrada sea de su agrado.
+                        Bienvenido a Lannex esperamos que la información suministrada sea de su agrado.
                     </div>
                 </div>
             </div>
@@ -70,7 +75,11 @@ echo $this->Html->meta(
                             </h5>
                         </li>				
                         <li><h5>
-                                <?php echo $this->Html->link("Contacto", array("controller" => "inicio", "action" => "Contacto")); ?>
+                                <?php echo $this->Html->link("Contactos", array("controller" => "inicio", "action" => "Contacto")); ?>
+                            </h5>
+                        </li>
+                        <li><h5>
+                                <?php echo $this->Html->link("Ayuda", array("controller" => "inicio", "action" => "Ayuda")); ?>
                             </h5>
                         </li>
 
@@ -93,15 +102,13 @@ echo $this->Html->meta(
                     <a href="#top"><span></span></a>
                 </p>
                 <div class="four columns">
-                    <h1>CONTACTOS</h1>	
-                    TELÉFONOS: <br>
-                    0243 215 4774 <br>
-                    0424 345 5888<br><br>
+                    <h1>CONTACTOS <br><br>
+                    Teléfonos:</h1>	
+                    0243-215.47.74 <br>
+                    0424-345.58.88<br><br>
                     <h1>Dirección</h1>
-                    Av. principal de Santa Inés , Multicentro Sorrento, local 2-7 , La Morita 2 - Edo Aragua<br><br>
-                    <h0>PRESIDENTE:</h0> Michael Ostos<br>
-                    <h0>VICE-PRESIDENTE:</h0> Juan Brizuela
-
+                    Av. principal de Santa Inés , Multicentro Sorrento, local 2-7 , La Morita 2 - Edo. Aragua<br><br>
+                    
                 </div>
                 <div class="four columns">
                     <h1>REDES SOCIALES</h1>
@@ -115,7 +122,12 @@ echo $this->Html->meta(
                     </div>
                     <div class="social flickr">
                         <a href="#"></a>
-                    </div>
+                    </div><br><br><br>
+                    <h1>CORREOS ELECTRÓNICOS</h1>
+                        
+                        <li><a href= "https://www.gmail.com">empresa@lannex.com.ve</a></li>
+                        <li><a href= "https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=12&ct=1431364959&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https:%2F%2Fmail.live.com%2Fdefault.aspx%3Fmkt%3Des-us%26rru%3Dinbox&lc=2058&id=64855&mkt=es-us&cbcxt=mai">empresa.lannexca@gmail.com</a></li><br>
+
                 </div>
                 <div class="four columns">
                     <h1 class="newsmargin">RECIBE NUESTRAS NOTICIAS</h1>
@@ -133,10 +145,10 @@ echo $this->Html->meta(
         <div class="copyright">
             <div class="row">
                 <div class="six columns">
-                    &copy;<span class="small"> Copyright 2015 www.lannex.com.ve </span>
+                    &copy;<span class="small"> Copyright 2015 <a href="http://www.lannex.com.ve">www.lannex.com.ve</a> / Todos los derechos reservados - RIF: J-40386924-3 </span>
                 </div>
                 <div class="six columns">
-                    <span class="small floatright"> Desarrollado por:<a href="https://www.facebook.com/Anderson.Andres.Guerrero"> Ing. Anderson Guerrero & Ing. Jhoan Hernández</a>  </span>
+                    <span class="small floatright"> Web Diseñado y Programado por:<a href=""> Ing. Anderson Guerrero & Ing. Jhoan Hernández</a>  </span>
                 </div>
             </div>
         </div>

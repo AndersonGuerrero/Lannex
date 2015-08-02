@@ -23,7 +23,7 @@ function corresponde(select)
         }
            
            if(select.selectedIndex===1 || select.selectedIndex===2){
-               document.getElementById('IdEmp_banco').innerHTML='<label>Banco de la Empresa</label><select name="Emp_banco" required="true"><option></option><option value="BNC">(BNC) Banco Nacional de Credito</option><option value="BACARIBE">Bancaribe</option><option value="BFC">(BFC) Banco Fondo Comun</option></select>';
+               document.getElementById('IdEmp_banco').innerHTML='<label>Banco de la Empresa</label><select name="Emp_banco" required="true"><option></option><option value="BBVA">BBVA Provincial </option><option value="BNC">(BNC) Banco Nacional de Credito</option><option value="BACARIBE">Bancaribe</option><option value="BFC">(BFC) Banco Fondo Comun</option></select>';
            }else{
                document.getElementById('IdEmp_banco').innerHTML='';
            }

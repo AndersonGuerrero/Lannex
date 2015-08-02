@@ -69,7 +69,7 @@ class DATABASE_CONFIG {
 		'persistent' => false,
 		'host' => 'localhost',
 		'login' => 'root',
-		'password' => '24390246',
+		'password' => '',
 		'database' => 'lannex',
 		'prefix' => '',
 		//'encoding' => 'utf8',

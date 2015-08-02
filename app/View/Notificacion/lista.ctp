@@ -5,34 +5,49 @@
 	<div class="row">
 		<div class="twelve columns">
 			<p class="left">
-				Notificaciones del mes
+				Notificaciones del Mes en Curso...
 			</p>
 			<p class="right">
 <?php echo $this->Session->read('admin')['Nombre'].' '.$this->Session->read('admin')['Apellido'].' ------------->'.$this->Html->link('Salir',array('controller'=>'admin','action'=>'Salir')); ?>
+
 			</p>
 		</div>
 	</div>
 </div>
-
-
-
-
-
     <br>
     <center>
+    <form action="" method="POST">
+        <div class="columns" style="max-width:125px;display:-webkit-box">
+        <label>Filtro por mes:</label>
+        <select name="mes" onchange="this.form.submit()">
+            <option <?php  if ($mes=='01'){echo 'selected';} ?>   value="01">Enero</option>
+            <option <?php  if ($mes=='02'){echo 'selected';} ?> value="02">Febrero</option>
+            <option <?php  if ($mes=='03'){echo 'selected';} ?> value="03">Marzo</option>
+            <option <?php  if ($mes=='04'){echo 'selected';} ?> value="04">Abril</option>
+            <option <?php  if ($mes=='05'){echo 'selected';} ?> value="05">Mayo</option>
+            <option <?php  if ($mes=='06'){echo 'selected';} ?> value="06">Junio</option>
+            <option <?php  if ($mes=='07'){echo 'selected';} ?> value="07">Julio</option>
+            <option <?php  if ($mes=='08'){echo 'selected';} ?> value="08">Agosto</option>
+            <option <?php  if ($mes=='09'){echo 'selected';} ?> value="09">Septiembre</option>
+            <option <?php  if ($mes=='10'){echo 'selected';} ?> value="10">Octubre</option>
+            <option <?php  if ($mes=='11'){echo 'selected';} ?> value="11">Noviembre</option>
+            <option <?php  if ($mes=='12'){echo 'selected';} ?> value="12">Diciembre</option>
+        </select>
+        </div>
+        <br>
+    </form>
     <table>
         <thead>
             <tr>
                 <th>Nombre Y Apellido</th>
-                 <th>Cedula o Rif</th>
-                  <th>Comunidad</th>
-                  <th>Telefono</th>
-                    <th>Monto</th>
-                     <th>Corresponde a</th>
-                      <th>Pago</th>
-                      
-                        <th>Fecha Y Hora</th>
-                         <th>Mensaje</th>
+                <th>Cedula o Rif</th>
+                <th>Comunidad</th>
+                <th>Telefono</th>
+                <th>Monto</th>
+                <th>Corresponde a</th>
+                <th>Pago</th>      
+                <th>Fecha Y Hora</th>
+                <th>Mensaje</th>
             </tr>
         </thead>
         <tbody>
@@ -48,8 +63,7 @@
                 <td><?php echo $notifi['Notificacion']['Telefono']; ?></td>
                 <td><?php echo $notifi['Notificacion']['Monto'].' Bsf'; ?></td>
                 <td><?php echo $notifi['Notificacion']['Corresponde']; ?></td>
-                
-                
+
                 <td>
  <?php 
  $de=' DE ';
@@ -65,7 +79,7 @@
                 <td><?php echo $notifi['Notificacion']['Fecha_Hora']; ?></td>
                 <td><?php
                 for($i=0;$i<strlen($notifi['Notificacion']['Mensaje']);$i++){
-                    echo $notifi['Notificacion']['Mensaje'][$i]; if($i>=15){break;}
+                    echo $notifi['Notificacion']['Mensaje'][$i]; if($i>=35){break;}
                 }
                 $mes_año=$notifi['Notificacion']['mes'].'-'.$notifi['Notificacion']['ano'];
                 ?></td>

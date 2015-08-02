@@ -27,14 +27,23 @@ class NotificacionController extends AppController{
                 $this->redirect(array('controller'=>'inicio','action' => 'index','home'));
             }
             }
+		$this->set('title', 'Notificación de Pagos...');
     }
     
     
     
     function Lista(){
         if(!$this->Session->read('admin')){ $this->redirect(array('controller'=>'admin','action' =>'index'));}
-        $this->set('Notificaciones',  $this->Notificacion->find('all',array('conditions'=>array('mes'=>date('m'),'ano'=>date('Y')))));}
-        
+	 if ($this->request->is('post')){
+         $mes = $this->request->data('mes');
+         $n=$this->Notificacion->find('all',array('conditions'=>array('mes'=>$mes,'ano'=>date('Y'))));        
+         $this->set(array('mes'=>$mes, 'Notificaciones'=> $n, 'title'=>'Notificaciones del Mes'));
+     }else{
+    $mes = date("m");
+    $n=$this->Notificacion->find('all',array('conditions'=>array('mes'=>$mes,'ano'=>date('Y'))));        
+	$this->set(array('mes'=>$mes, 'Notificaciones'=> $n, 'title'=>'Notificaciones del Mes'));}
+    
+     }
         
 function  eliminar($id=null){}
 
