@@ -1,2 +1,2 @@
 # Lannex
-PHP Framework
+Web site
